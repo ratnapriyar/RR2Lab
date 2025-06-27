@@ -29,7 +29,20 @@ https://templatemo.com/tm-588-ebook-landing
 
 -->
     </head>
-    
+    <style>
+        .image-container {
+    overflow: hidden; /* Prevents overflow during zoom */
+}
+
+.image-container img {
+    transition: transform 0.3s ease; /* Smooth transition for zoom */
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* Scales the image up by 20% on hover */
+}
+
+    </style>
     <body>
 
         <main>
@@ -107,7 +120,9 @@ https://templatemo.com/tm-588-ebook-landing
                         </li>
                         <li class="list-group-item">
                             <strong>March 2025:</strong> Rinki was invited to lead the multi-omics group at Ryan Initiative for Macular Research Conference.
-                            <p><img src="Pics/RIMR2025.jpg" alt="URC" class="img-fluid" style="height: 200px; width: auto;"></p>
+                            <div class="image-container">
+                                <img src="Pics/RIMR2025.jpg" alt="URC" class="img-fluid" style="height: 200px; width: auto;">
+                            </div>
                         </li>
                         <li class="list-group-item">
                             <strong>March 2025:</strong> Vandana Venkatesh joined the lab as part of the SOAR (Student Opportunities for Advancement in Research) program. Welcome, Vandana!
