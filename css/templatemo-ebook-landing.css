@@ -559,7 +559,8 @@ strong {
   background-size: cover;
   background-position: center;
   position: relative;
-  /*background-color: #16817b ;*/
+  background-color: rgba(255, 255, 255, 0.6); 
+  background-blend-mode: lighten;
   background-image: url('../images/Webpage_image_FINAL.png');
   padding-top: 50px;
 }
