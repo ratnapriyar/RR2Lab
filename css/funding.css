@@ -1,0 +1,227 @@
+.funding-page {
+  color: #243237;
+}
+
+.funding-intro {
+  background: linear-gradient(120deg, #fff8ed, #f6f8f8);
+  border-bottom: 1px solid #e9e5df;
+  padding: 80px 0;
+}
+
+.funding-eyebrow {
+  color: #90400e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.funding-intro h1 {
+  color: #243237;
+  margin-bottom: 20px;
+}
+
+.funding-lead {
+  color: #526168;
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.funding-research-link {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.funding-page a:focus {
+  outline-color: #90400e;
+}
+
+.funding-section {
+  padding: 64px 0;
+}
+
+.federal-support {
+  border: 1px solid #e1e6e8;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.federal-support-intro,
+.funding-grants {
+  padding: 40px;
+}
+
+.federal-support-intro {
+  background: #f6f8f8;
+}
+
+.funding-page h2 {
+  color: #243237;
+  font-size: 30px;
+}
+
+.funding-agency {
+  color: #526168;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.funding-grants h3 {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.funding-grants ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.funding-grants li + li {
+  border-top: 1px solid #e1e6e8;
+}
+
+.funding-grants li a,
+.funding-grant-reference {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.funding-grants li a {
+  font-weight: 600;
+}
+
+.grant-link-label {
+  color: #526168;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.funding-foundations {
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+
+.funding-section-heading {
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
+.funding-section-heading > p:last-child {
+  margin-top: 16px;
+}
+
+.supporter-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.supporter-card {
+  background: #fff;
+  border: 1px solid #e1e6e8;
+  border-radius: 16px;
+  color: #243237;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.supporter-card:hover {
+  border-color: #c3540a;
+  box-shadow: 0 8px 24px rgba(36, 50, 55, 0.08);
+  color: #243237;
+}
+
+.supporter-logo {
+  align-items: center;
+  display: flex;
+  height: 128px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.supporter-logo img {
+  height: auto;
+  max-height: 110px;
+  max-width: 100%;
+  object-fit: contain;
+  width: 250px;
+}
+
+.supporter-logo-dark {
+  background: #243237;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.supporter-card h3 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.supporter-card p {
+  color: #526168;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.supporter-link {
+  color: #a74709;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.funding-page .contact-section .site-footer-title,
+.funding-page .contact-section .mb-0 {
+  color: #243237;
+}
+
+@media screen and (max-width: 767px) {
+  .funding-intro {
+    padding: 48px 0;
+  }
+
+  .funding-lead {
+    font-size: 18px;
+  }
+
+  .funding-section {
+    padding: 40px 0;
+  }
+
+  .funding-foundations {
+    padding-top: 0;
+  }
+
+  .federal-support,
+  .supporter-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .federal-support-intro,
+  .funding-grants,
+  .supporter-card {
+    padding: 24px;
+  }
+
+  .funding-page h2 {
+    font-size: 26px;
+  }
+
+  .funding-grants li a {
+    flex-direction: column;
+  }
+
+  .grant-link-label {
+    margin-top: 6px;
+  }
+}

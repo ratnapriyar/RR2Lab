@@ -19,15 +19,21 @@
   
       function scrollToDiv(element,navheight){
         var offset = element.offset();
+        if (!offset) {
+          return;
+        }
         var offsetTop = offset.top;
         var totalScroll = offsetTop-navheight;
-  
-        $('body,html').animate({
-        scrollTop: totalScroll
-        }, 300);
+
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          $('html, body').scrollTop(totalScroll);
+        } else {
+          $('html, body').animate({
+            scrollTop: totalScroll
+          }, 300);
+        }
       }
     });
   
   })(window.jQuery);
-
 

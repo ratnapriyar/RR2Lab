@@ -1,37 +1,28 @@
-//jquery-click-scroll
-//by syamsul'isul' Arifin
+(function () {
+  var links = document.querySelectorAll('.navbar-nav .nav-link[href^="#section_"]');
 
-var sectionArray = [1, 2, 3, 4, 5];
+  if (!links.length) {
+    return;
+  }
 
-$.each(sectionArray, function(index, value){
-          
-     $(document).scroll(function(){
-         var offsetSection = $('#' + 'section_' + value).offset().top - 88;
-         var docScroll = $(document).scrollTop();
-         var docScroll1 = docScroll + 1;
-         
-        
-         if ( docScroll1 >= offsetSection ){
-             $('.navbar-nav .nav-item .nav-link').removeClass('active');
-             $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');  
-             $('.navbar-nav .nav-item .nav-link').eq(index).addClass('active');
-             $('.navbar-nav .nav-item .nav-link').eq(index).removeClass('inactive');
-         }
-         
-     });
-    
-    $('.click-scroll').eq(index).click(function(e){
-        var offsetClick = $('#' + 'section_' + value).offset().top - 88;
-        e.preventDefault();
-        $('html, body').animate({
-            'scrollTop':offsetClick
-        }, 300)
-    });
-    
-});
+  function updateActiveLink() {
+    var activeLink = links[0];
 
-$(document).ready(function(){
-    $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');    
-    $('.navbar-nav .nav-item .nav-link').eq(0).addClass('active');
-    $('.navbar-nav .nav-item .nav-link:link').eq(0).removeClass('inactive');
-});
+    for (var i = 0; i < links.length; i += 1) {
+      var sectionId = links[i].getAttribute('href').slice(1);
+      var section = document.getElementById(sectionId);
+
+      if (section && section.getBoundingClientRect().top <= 100) {
+        activeLink = links[i];
+      }
+    }
+
+    for (var j = 0; j < links.length; j += 1) {
+      links[j].classList.toggle('active', links[j] === activeLink);
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveLink);
+  window.addEventListener('resize', updateActiveLink);
+  updateActiveLink();
+})();

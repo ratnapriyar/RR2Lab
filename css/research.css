@@ -1,0 +1,266 @@
+.research-page {
+  color: #243237;
+}
+
+.research-page p {
+  color: #526168;
+  line-height: 1.8;
+}
+
+.research-intro {
+  background: linear-gradient(120deg, #fff8ed, #f6f8f8);
+  border-bottom: 1px solid #e9e5df;
+  padding: 72px 0;
+}
+
+.research-page .research-eyebrow {
+  color: #90400e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.research-intro h1 {
+  color: #243237;
+  margin-bottom: 20px;
+}
+
+.research-page .research-lead {
+  color: #243237;
+  font-size: 24px;
+  line-height: 1.5;
+  max-width: 720px;
+}
+
+.research-intro .container > p:last-of-type {
+  max-width: 800px;
+}
+
+.research-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.research-topics a {
+  background: #fff;
+  border: 1px solid #e1d9cf;
+  border-radius: 24px;
+  color: #90400e;
+  font-size: 14px;
+  padding: 9px 16px;
+}
+
+.research-topics a:hover {
+  background: #fff0da;
+  border-color: #a74709;
+}
+
+.research-page a:focus {
+  outline-color: #90400e;
+}
+
+.research-projects {
+  padding: 64px 0;
+}
+
+.research-section-heading {
+  margin-bottom: 32px;
+  max-width: 780px;
+}
+
+.research-page h2 {
+  color: #243237;
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+.research-section-heading h2 {
+  margin-bottom: 16px;
+}
+
+.research-page .accordion-item {
+  border: 1px solid #dce3e6;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.research-page .accordion-button {
+  background: #f6f8f8;
+  border-radius: 12px;
+  color: #243237;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 24px;
+}
+
+.research-page .accordion-button:not(.collapsed) {
+  background: #fff8ed;
+  box-shadow: inset 0 -1px 0 #eadac6;
+  color: #90400e;
+}
+
+.research-page .accordion-button:focus {
+  box-shadow: inset 0 0 0 3px #c3540a;
+}
+
+.research-page .accordion-body {
+  padding: 32px;
+}
+
+.research-page .accordion-header {
+  scroll-margin-top: 110px;
+}
+
+.research-page .research-citation {
+  background: #f6f8f8;
+  border-left: 3px solid #a74709;
+  border-radius: 0 8px 8px 0;
+  color: #44545c;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+  padding: 20px;
+}
+
+.research-page .accordion-body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.research-page .carousel {
+  background: #f6f8f8;
+  border: 1px solid #e1e6e8;
+  border-radius: 12px;
+  margin-top: 28px;
+  padding: 20px 56px;
+}
+
+.research-page .carousel-inner img {
+  background: #fff;
+  height: auto;
+  max-height: 540px;
+  object-fit: contain;
+}
+
+.research-page .carousel-control-prev,
+.research-page .carousel-control-next {
+  bottom: auto;
+  background: #243237;
+  border: 1px solid #243237;
+  border-radius: 50%;
+  height: 40px;
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+}
+
+.research-page .carousel-control-prev {
+  left: 8px;
+}
+
+.research-page .carousel-control-next {
+  right: 8px;
+}
+
+.research-page .carousel-control-prev:hover,
+.research-page .carousel-control-next:hover {
+  background: #a74709;
+}
+
+.research-page .carousel-control-prev-icon,
+.research-page .carousel-control-next-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.research-more {
+  background: #f6f8f8;
+  border: 1px solid #e1e6e8;
+  border-radius: 12px;
+  margin-top: 40px;
+  padding: 32px;
+}
+
+.research-more h2 {
+  font-size: 24px;
+}
+
+.research-more a {
+  font-weight: 600;
+  margin: 8px 24px 0 0;
+}
+
+.research-page .contact-section {
+  background: #fff8ed;
+  border-top: 1px solid #e9e5df;
+}
+
+.research-page .contact-section::before {
+  display: none;
+}
+
+.research-page .contact-section h4,
+.research-page .site-footer-title {
+  color: #243237;
+}
+
+.research-page .contact-section p {
+  color: #526168;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 575px) {
+  .research-intro,
+  .research-projects {
+    padding: 40px 0;
+  }
+
+  .research-page h2 {
+    font-size: 26px;
+  }
+
+  .research-page .research-lead {
+    font-size: 21px;
+  }
+
+  .research-page .accordion-button {
+    font-size: 18px;
+    padding: 20px 16px;
+  }
+
+  .research-page .accordion-body {
+    padding: 20px 16px;
+  }
+
+  .research-page .research-citation {
+    padding: 16px;
+  }
+
+  .research-page .carousel {
+    padding: 12px 8px 60px;
+  }
+
+  .research-page .carousel-control-prev,
+  .research-page .carousel-control-next {
+    bottom: 8px;
+    top: auto;
+    transform: none;
+  }
+
+  .research-page .carousel-control-prev {
+    left: calc(50% - 48px);
+  }
+
+  .research-page .carousel-control-next {
+    right: calc(50% - 48px);
+  }
+
+  .research-more {
+    padding: 24px;
+  }
+}
