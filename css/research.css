@@ -159,6 +159,14 @@
   width: 40px;
 }
 
+.research-page .research-figure-caption {
+  color: #526168;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 16px;
+  text-align: center;
+}
+
 .research-page .carousel-control-prev {
   left: 8px;
 }

@@ -161,35 +161,6 @@
   margin-top: auto;
 }
 
-.funding-page .contact-section {
-  background: #fff8ed;
-  border-top: 1px solid #e9e5df;
-  padding-top: 72px;
-  padding-bottom: 72px;
-}
-
-.funding-page .contact-section::before {
-  display: none;
-}
-
-.funding-page .contact-section h4,
-.funding-page .contact-section .site-footer-title {
-  color: #243237;
-}
-
-.funding-page .contact-section p {
-  color: #526168;
-  font-size: 16px;
-  line-height: 1.75;
-}
-
-@media screen and (max-width: 575px) {
-  .funding-page .contact-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .funding-intro {
     padding: 48px 0;

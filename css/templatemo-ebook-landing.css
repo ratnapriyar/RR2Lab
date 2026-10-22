@@ -1132,14 +1132,80 @@ strong {
 }
 
 .bi-google-scholar::before {
-  content: "GS";
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  font-weight: bold;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('../images/google-scholar.svg') no-repeat center;
+  background-size: 35px 35px;
 }
 
 .bi-google-scholar:hover {
   background-color: #8f3e08;
+}
+
+.funding-page .contact-section,
+.news-page .contact-section {
+  background: #fff8ed;
+  border-top: 1px solid #e9e5df;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.funding-page .contact-section::before,
+.news-page .contact-section::before {
+  display: none;
+}
+
+.funding-page .contact-section h4,
+.funding-page .contact-section .site-footer-title,
+.news-page .contact-section h4,
+.news-page .contact-section .site-footer-title {
+  color: #243237;
+}
+
+.funding-page .contact-section p,
+.news-page .contact-section p {
+  color: #526168;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+@media screen and (max-width: 575px) {
+  .funding-page .contact-section,
+  .news-page .contact-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+.news-with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.news-copy {
+  line-height: 1.75;
+}
+
+.news-with-image > p,
+.news-with-image > .image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .news-with-image {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
 }
 
 .news-image {
