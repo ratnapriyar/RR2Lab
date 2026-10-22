@@ -3,6 +3,29 @@
   
   "use strict";
 
+    var backToTop = document.createElement('button');
+    backToTop.type = 'button';
+    backToTop.className = 'back-to-top';
+    backToTop.hidden = true;
+    backToTop.innerHTML = '<i class="bi bi-arrow-up" aria-hidden="true"></i><span>Back to top</span>';
+    document.body.appendChild(backToTop);
+
+    function updateBackToTop() {
+      backToTop.hidden = window.pageYOffset < 300;
+    }
+
+    window.addEventListener('scroll', updateBackToTop, { passive: true });
+    updateBackToTop();
+
+    backToTop.addEventListener('click', function () {
+      var topLink = document.querySelector('.navbar-brand');
+      if (topLink) {
+        topLink.focus({ preventScroll: true });
+      }
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'instant' : 'smooth' });
+    });
+
     // MENU
     $('.navbar-collapse a').on('click',function(){
       $(".navbar-collapse").collapse('hide');
@@ -36,4 +59,3 @@
     });
   
   })(window.jQuery);
-
