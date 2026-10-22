@@ -476,9 +476,9 @@ strong {
 
 .navbar-expand-lg .navbar-nav .nav-link {
   border-radius: var(--border-radius-large);
-  margin: 10px;
-  padding: 10px;
-  font-size: 14px;
+  margin: 4px;
+  padding: 8px;
+  font-size: 18px;
 }
 
 .navbar-nav .nav-link {
@@ -495,6 +495,19 @@ strong {
 .navbar-nav .nav-link.active, 
 .navbar-nav .nav-link:hover {
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar-brand {
+    font-size: 24px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    letter-spacing: 0;
+    margin: 2px;
+    padding: 8px 6px;
+    white-space: nowrap;
+  }
 }
 
 .inner-page .sticky-wrapper {
