@@ -9,6 +9,19 @@
 
   var imageModal = new window.bootstrap.Modal(modalElement);
   var images = document.querySelectorAll('.news-image');
+  var coverImageLink = document.getElementById('genomeResearchCoverLink');
+
+  if (coverImageLink) {
+    coverImageLink.addEventListener('click', function (event) {
+      var openedWindow = window.open(coverImageLink.href, '_blank');
+
+      if (openedWindow) {
+        event.preventDefault();
+        openedWindow.opener = null;
+        openedWindow.focus();
+      }
+    }, true);
+  }
 
   function showImage(image) {
     modalImage.src = image.currentSrc || image.src;
@@ -18,6 +31,10 @@
   }
 
   images.forEach(function (image) {
+    if (image.closest('a[href]')) {
+      return;
+    }
+
     image.addEventListener('click', function () {
       showImage(image);
     });
