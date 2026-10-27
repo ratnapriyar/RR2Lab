@@ -59,6 +59,17 @@
   border-color: #a74709;
 }
 
+.research-topics a[aria-current="location"] {
+  background: #fff0da;
+  border-color: #a74709;
+  box-shadow: 0 0 0 2px rgba(167, 71, 9, 0.12);
+  font-weight: 700;
+}
+
+.research-topics + .accordion {
+  margin-top: 16px;
+}
+
 .research-page a:focus {
   outline-color: #90400e;
 }
