@@ -438,6 +438,36 @@ https://templatemo.com/tm-588-ebook-landing
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+            (function () {
+                function openTopic(hash) {
+                    if (!hash || hash.charAt(0) !== '#') {
+                        return;
+                    }
+
+                    var heading = document.getElementById(hash.slice(1));
+                    var toggle = heading && heading.querySelector('[data-bs-toggle="collapse"]');
+                    var target = toggle && toggle.getAttribute('data-bs-target');
+                    var panel = target && document.querySelector(target);
+
+                    if (panel && window.bootstrap && window.bootstrap.Collapse) {
+                        window.bootstrap.Collapse.getOrCreateInstance(panel, { toggle: false }).show();
+                    }
+                }
+
+                document.querySelectorAll('.research-topics a[href^="#"]').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        openTopic(link.hash);
+                    });
+                });
+
+                window.addEventListener('hashchange', function () {
+                    openTopic(window.location.hash);
+                });
+
+                openTopic(window.location.hash);
+            })();
+        </script>
 
     </body>
 </html>
