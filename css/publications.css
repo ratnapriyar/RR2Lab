@@ -5,12 +5,19 @@
 .publications-intro {
   background: linear-gradient(120deg, #fff8ed, #f6f8f8);
   border-bottom: 1px solid #e9e5df;
-  padding: 80px 0;
+  padding: 48px 0;
 }
 
 .publications-intro h1 {
   color: #243237;
+  font-size: 28px;
   margin-bottom: 0;
+}
+
+.publications-intro-copy {
+  color: #90400e;
+  font-size: 16px;
+  margin: 8px 0 0;
 }
 
 .publications-section {
@@ -51,6 +58,18 @@
 }
 
 @media screen and (max-width: 575px) {
+  .publications-intro {
+    padding: 36px 0;
+  }
+
+  .publications-intro h1 {
+    font-size: 24px;
+  }
+
+  .publications-intro-copy {
+    font-size: 14px;
+  }
+
   .publications-section {
     padding: 40px 0;
   }
